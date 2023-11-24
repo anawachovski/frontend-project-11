@@ -5,17 +5,37 @@
 		  <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Webpack App</title>
     </head>
-    <body>
-        <h1>RSS агрегатор</h1>
-        <h2>
-					Начните читать RSS сегодня! Это легко, это красиво.
-				</h2>
-				<div class="form">
-					<form action="">
-						<input type="text" placeholder="Ссылка RSS">
-						<input type="submit" value="Добавить">
-					</form>
-				</div>
+    <body class="d-flex flex-column min-vh-100">
+			<main class="flex-grow-1">
+				<section class="container-fluid bg-dark p-5">
+					<div class="row">
+						<div class="col-10 col-lg-8 mx-auto text-white">
+							<h1 class="display-3 mb-0">RSS агрегатор</h1>
+							<p class="lead">
+								Начните читать RSS сегодня! Это легко, это красиво.
+							</p>
+							<form action="" class="rcc-form text-body">
+								<div class="row">
+									<div class="col">
+										<div class="form-floating">
+											<input type="text" autofocus required name="url" aria-label="url" class="form-control w-100" placeholder="Ссылка RSS" id="url-input" autocomplete="off">
+											<label for="url-input">Ссылка RSS</label>
+										</div>
+									</div>
+									<div class="col-auto">
+										<button type="submit" aria-label="add" class="h-100 btn btn-lg btn-primary px=sm-5">Добавить</button>
+									</div>
+								</div>
+							</form>
+							<p class="mt-2 mb-0" style="color: #888">
+								Пример: https://ru.hexlet.io/lessons.rss
+							</p>
+							<p class="feedback m-0 position-absolute small text-success">RSS успешно загружен</p>
+						</div>
+					</div>
+				</section>
+			</main>
+        
     </body>
     
 </html>
